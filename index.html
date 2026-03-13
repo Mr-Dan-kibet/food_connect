@@ -3,28 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Food Connect – Sharing Surplus Food</title>
+  <title>Food Connect - Sharing Surplus Food</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="index.css"/>
 </head>
 <body>
 
-<!-- ── NAVBAR ── -->
 <nav>
   <a class="logo" href="#" onclick="showPage('home')">
     <div class="logo-box">FOOD<br><span>CONNECT</span></div>
   </a>
-  <ul class="nav-links">
-    <li>
-      <a href="#" onclick="showPage('home')" id="nav-home" class="active">
-        Home<span class="nav-sub">Contact</span>
-      </a>
-    </li>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#" onclick="showPage('home')" id="nav-home" class="active">Home</a></li>
     <li><a href="#" onclick="showPage('how')" id="nav-how">How It Works</a></li>
     <li><a href="#" onclick="showPage('involved')" id="nav-involved">Get Involved</a></li>
     <li><a href="#" onclick="showPage('about')" id="nav-about">About Us</a></li>
+    <li class="nav-donate-mobile"><a href="#" class="btn-donate" onclick="showPage('contact')">Donate Now</a></li>
   </ul>
-  <a href="#" class="btn-donate" onclick="showPage('contact')">Donate Now</a>
+  <a href="#" class="btn-donate nav-donate-desktop" onclick="showPage('contact')">Donate Now</a>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <!-- HOME PAGE -->
@@ -44,21 +43,9 @@
   </section>
 
   <section class="icon-strip">
-    <div class="icon-card">
-      <div class="icon-wrap">🍽️</div>
-      <h3>Rescue Food</h3>
-      <p>Collect surplus meals from hotels and restaurants before they go to waste.</p>
-    </div>
-    <div class="icon-card">
-      <div class="icon-wrap">🤝</div>
-      <h3>Feed the Community</h3>
-      <p>Deliver to those in need — shelters, families, and individuals facing hunger.</p>
-    </div>
-    <div class="icon-card">
-      <div class="icon-wrap">♻️</div>
-      <h3>Reduce Waste</h3>
-      <p>Help cut down on food waste and support a more sustainable future for all.</p>
-    </div>
+    <div class="icon-card"><div class="icon-wrap">&#127869;</div><h3>Rescue Food</h3><p>Collect surplus meals from hotels and restaurants before they go to waste.</p></div>
+    <div class="icon-card"><div class="icon-wrap">&#129309;</div><h3>Feed the Community</h3><p>Deliver to those in need - shelters, families, and individuals facing hunger.</p></div>
+    <div class="icon-card"><div class="icon-wrap">&#9851;</div><h3>Reduce Waste</h3><p>Help cut down on food waste and support a more sustainable future for all.</p></div>
   </section>
 
   <section class="mission">
@@ -83,20 +70,20 @@
     <div class="stories-header">
       <span class="section-label" style="background:rgba(255,255,255,.1);color:#fff;">Impact</span>
       <h2 class="section-title">Success Stories</h2>
-      <p class="section-sub">See how we're making a difference one meal at a time.</p>
+      <p class="section-sub">See how we are making a difference one meal at a time.</p>
     </div>
     <div class="stories-grid">
       <div class="story-card">
         <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?w=600&q=70" alt="Meals Delivered"/>
-        <div class="story-caption"><p>📦 Impact</p><h3>Meals Delivered</h3></div>
+        <div class="story-caption"><p>Impact</p><h3>Meals Delivered</h3></div>
       </div>
       <div class="story-card">
         <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=600&q=70" alt="Families Fed"/>
-        <div class="story-caption"><p>👨‍👩‍👧 Community</p><h3>Families Fed</h3></div>
+        <div class="story-caption"><p>Community</p><h3>Families Fed</h3></div>
       </div>
       <div class="story-card">
         <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&q=70" alt="Food Saved"/>
-        <div class="story-caption"><p>🌿 Sustainability</p><h3>Food Saved</h3></div>
+        <div class="story-caption"><p>Sustainability</p><h3>Food Saved</h3></div>
       </div>
     </div>
   </section>
@@ -116,24 +103,9 @@
       <h2 class="section-title" style="margin:0 auto;">Three Simple Steps</h2>
     </div>
     <div class="steps-grid">
-      <div class="step-card">
-        <div class="step-num">1</div>
-        <div class="icon">🏨</div>
-        <h3>Hotels Report Surplus</h3>
-        <p>Partnered hotels log their surplus meals each day through our simple app or phone call. Our team is notified immediately.</p>
-      </div>
-      <div class="step-card">
-        <div class="step-num">2</div>
-        <div class="icon">🚐</div>
-        <h3>We Collect & Package</h3>
-        <p>Our trained volunteers pick up the food in food-safe containers, ensuring quality and hygiene standards are met at all times.</p>
-      </div>
-      <div class="step-card">
-        <div class="step-num">3</div>
-        <div class="icon">🏘️</div>
-        <h3>Delivered to Communities</h3>
-        <p>Meals are distributed to shelters, community kitchens, and families in need — all within hours of collection.</p>
-      </div>
+      <div class="step-card"><div class="step-num">1</div><div class="icon">&#127976;</div><h3>Hotels Report Surplus</h3><p>Partnered hotels log their surplus meals each day through our simple app or phone call. Our team is notified immediately.</p></div>
+      <div class="step-card"><div class="step-num">2</div><div class="icon">&#128656;</div><h3>We Collect and Package</h3><p>Our trained volunteers pick up the food in food-safe containers, ensuring quality and hygiene standards are met at all times.</p></div>
+      <div class="step-card"><div class="step-num">3</div><div class="icon">&#127959;</div><h3>Delivered to Communities</h3><p>Meals are distributed to shelters, community kitchens, and families in need - all within hours of collection.</p></div>
     </div>
   </section>
 
@@ -143,13 +115,13 @@
       <h2 class="section-title">The Food Journey</h2>
     </div>
     <div class="process-row">
-      <div class="process-node"><div class="icon">🍲</div><h4>Surplus Food</h4><p>Hotels & restaurants</p></div>
-      <div class="arrow">→</div>
-      <div class="process-node"><div class="icon">📋</div><h4>Quality Check</h4><p>Safe & hygienic</p></div>
-      <div class="arrow">→</div>
-      <div class="process-node"><div class="icon">🚗</div><h4>Transport</h4><p>Volunteer drivers</p></div>
-      <div class="arrow">→</div>
-      <div class="process-node"><div class="icon">❤️</div><h4>Recipients</h4><p>Families in need</p></div>
+      <div class="process-node"><div class="icon">&#127858;</div><h4>Surplus Food</h4><p>Hotels and restaurants</p></div>
+      <div class="arrow">&#8594;</div>
+      <div class="process-node"><div class="icon">&#128203;</div><h4>Quality Check</h4><p>Safe and hygienic</p></div>
+      <div class="arrow">&#8594;</div>
+      <div class="process-node"><div class="icon">&#128663;</div><h4>Transport</h4><p>Volunteer drivers</p></div>
+      <div class="arrow">&#8594;</div>
+      <div class="process-node"><div class="icon">&#10084;</div><h4>Recipients</h4><p>Families in need</p></div>
     </div>
   </section>
 
@@ -158,10 +130,10 @@
     <h2 class="section-title">Who We Work With</h2>
     <p class="section-sub" style="margin:0 auto 40px;">We partner with hotels, restaurants, food banks, community centres, and local NGOs to create a seamless food rescue network.</p>
     <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:20px; max-width:900px; margin:0 auto;">
-      <div style="background:var(--green-pale); padding:24px; border-radius:12px;"><div style="font-size:2rem;">🏨</div><h4 style="color:var(--green); margin-top:8px;">Hotels</h4></div>
-      <div style="background:var(--green-pale); padding:24px; border-radius:12px;"><div style="font-size:2rem;">🍽️</div><h4 style="color:var(--green); margin-top:8px;">Restaurants</h4></div>
-      <div style="background:var(--green-pale); padding:24px; border-radius:12px;"><div style="font-size:2rem;">🏛️</div><h4 style="color:var(--green); margin-top:8px;">Food Banks</h4></div>
-      <div style="background:var(--green-pale); padding:24px; border-radius:12px;"><div style="font-size:2rem;">🤲</div><h4 style="color:var(--green); margin-top:8px;">NGOs</h4></div>
+      <div style="background:var(--green-pale); padding:24px; border-radius:12px;"><div style="font-size:2rem;">&#127976;</div><h4 style="color:var(--green); margin-top:8px;">Hotels</h4></div>
+      <div style="background:var(--green-pale); padding:24px; border-radius:12px;"><div style="font-size:2rem;">&#127869;</div><h4 style="color:var(--green); margin-top:8px;">Restaurants</h4></div>
+      <div style="background:var(--green-pale); padding:24px; border-radius:12px;"><div style="font-size:2rem;">&#127963;</div><h4 style="color:var(--green); margin-top:8px;">Food Banks</h4></div>
+      <div style="background:var(--green-pale); padding:24px; border-radius:12px;"><div style="font-size:2rem;">&#129306;</div><h4 style="color:var(--green); margin-top:8px;">NGOs</h4></div>
     </div>
   </section>
 </div>
@@ -171,61 +143,31 @@
   <section class="page-hero">
     <span class="section-label" style="background:rgba(255,255,255,.15);color:#fff;">Join Us</span>
     <h1>Get Involved Today</h1>
-    <p>Whether you volunteer, donate, or partner with us — every action matters. Together we can end hunger.</p>
+    <p>Whether you volunteer, donate, or partner with us - every action matters. Together we can end hunger.</p>
   </section>
 
   <div class="involvement-cards">
     <div class="inv-card">
       <div class="inv-card-img"><img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?w=600&q=70" alt="Volunteer"/></div>
-      <div class="inv-card-body">
-        <span class="badge">🙋 Volunteer</span>
-        <h3>Join Our Volunteer Team</h3>
-        <p>Spend a few hours each week helping collect and deliver food to those in need. No experience required — just a kind heart.</p>
-        <a href="#" class="btn-green" onclick="showPage('contact')">Sign Up Now</a>
-      </div>
+      <div class="inv-card-body"><span class="badge">Volunteer</span><h3>Join Our Volunteer Team</h3><p>Spend a few hours each week helping collect and deliver food to those in need. No experience required - just a kind heart.</p><a href="#" class="btn-green" onclick="showPage('contact')">Sign Up Now</a></div>
     </div>
     <div class="inv-card">
       <div class="inv-card-img"><img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=600&q=70" alt="Donate"/></div>
-      <div class="inv-card-body">
-        <span class="badge">💛 Donate</span>
-        <h3>Make a Financial Donation</h3>
-        <p>Your contribution helps cover transport costs, packaging, and operations so more meals reach more families every day.</p>
-        <a href="#" class="btn-primary" onclick="showPage('contact')">Donate Now</a>
-      </div>
+      <div class="inv-card-body"><span class="badge">Donate</span><h3>Make a Financial Donation</h3><p>Your contribution helps cover transport costs, packaging, and operations so more meals reach more families every day.</p><a href="#" class="btn-primary" onclick="showPage('contact')">Donate Now</a></div>
     </div>
     <div class="inv-card">
       <div class="inv-card-img"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=70" alt="Partner"/></div>
-      <div class="inv-card-body">
-        <span class="badge">🤝 Partner</span>
-        <h3>Partner Your Hotel or Restaurant</h3>
-        <p>If your establishment generates leftover food, become a food rescue partner. We handle the collection — you just let us know.</p>
-        <a href="#" class="btn-green" onclick="showPage('contact')">Become a Partner</a>
-      </div>
+      <div class="inv-card-body"><span class="badge">Partner</span><h3>Partner Your Hotel or Restaurant</h3><p>If your establishment generates leftover food, become a food rescue partner. We handle the collection - you just let us know.</p><a href="#" class="btn-green" onclick="showPage('contact')">Become a Partner</a></div>
     </div>
   </div>
 
   <section style="padding:0 5% 70px; background:#fff;">
-    <div style="text-align:center; margin-bottom:40px;">
-      <span class="section-label">Why Join Us</span>
-      <h2 class="section-title">The Benefits of Joining</h2>
-    </div>
+    <div style="text-align:center; margin-bottom:40px;"><span class="section-label">Why Join Us</span><h2 class="section-title">The Benefits of Joining</h2></div>
     <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:24px; max-width:900px; margin:0 auto;">
-      <div style="display:flex; gap:16px; align-items:flex-start; padding:24px; background:var(--green-pale); border-radius:12px;">
-        <span style="font-size:1.8rem;">🌟</span>
-        <div><h4 style="color:var(--green); margin-bottom:6px;">Make Real Impact</h4><p style="color:var(--muted); font-size:.92rem;">Directly see the difference you make through our transparent reporting and stories.</p></div>
-      </div>
-      <div style="display:flex; gap:16px; align-items:flex-start; padding:24px; background:var(--green-pale); border-radius:12px;">
-        <span style="font-size:1.8rem;">🤝</span>
-        <div><h4 style="color:var(--green); margin-bottom:6px;">Join a Community</h4><p style="color:var(--muted); font-size:.92rem;">Connect with like-minded individuals who care about hunger and sustainability.</p></div>
-      </div>
-      <div style="display:flex; gap:16px; align-items:flex-start; padding:24px; background:var(--green-pale); border-radius:12px;">
-        <span style="font-size:1.8rem;">📜</span>
-        <div><h4 style="color:var(--green); margin-bottom:6px;">Earn Certificates</h4><p style="color:var(--muted); font-size:.92rem;">Volunteers receive recognition certificates and reference letters upon request.</p></div>
-      </div>
-      <div style="display:flex; gap:16px; align-items:flex-start; padding:24px; background:var(--green-pale); border-radius:12px;">
-        <span style="font-size:1.8rem;">🌱</span>
-        <div><h4 style="color:var(--green); margin-bottom:6px;">Reduce Food Waste</h4><p style="color:var(--muted); font-size:.92rem;">Be part of a greener future by helping reduce tonnes of food waste annually.</p></div>
-      </div>
+      <div style="display:flex; gap:16px; align-items:flex-start; padding:24px; background:var(--green-pale); border-radius:12px;"><span style="font-size:1.8rem;">&#11088;</span><div><h4 style="color:var(--green); margin-bottom:6px;">Make Real Impact</h4><p style="color:var(--muted); font-size:.92rem;">Directly see the difference you make through our transparent reporting and stories.</p></div></div>
+      <div style="display:flex; gap:16px; align-items:flex-start; padding:24px; background:var(--green-pale); border-radius:12px;"><span style="font-size:1.8rem;">&#129309;</span><div><h4 style="color:var(--green); margin-bottom:6px;">Join a Community</h4><p style="color:var(--muted); font-size:.92rem;">Connect with like-minded individuals who care about hunger and sustainability.</p></div></div>
+      <div style="display:flex; gap:16px; align-items:flex-start; padding:24px; background:var(--green-pale); border-radius:12px;"><span style="font-size:1.8rem;">&#128220;</span><div><h4 style="color:var(--green); margin-bottom:6px;">Earn Certificates</h4><p style="color:var(--muted); font-size:.92rem;">Volunteers receive recognition certificates and reference letters upon request.</p></div></div>
+      <div style="display:flex; gap:16px; align-items:flex-start; padding:24px; background:var(--green-pale); border-radius:12px;"><span style="font-size:1.8rem;">&#127807;</span><div><h4 style="color:var(--green); margin-bottom:6px;">Reduce Food Waste</h4><p style="color:var(--muted); font-size:.92rem;">Be part of a greener future by helping reduce tonnes of food waste annually.</p></div></div>
     </div>
   </section>
 
@@ -241,7 +183,7 @@
   <section class="page-hero">
     <span class="section-label" style="background:rgba(255,255,255,.15);color:#fff;">Our Story</span>
     <h1>About Food Connect</h1>
-    <p>Founded with a simple idea — that no meal should go to waste while people go hungry.</p>
+    <p>Founded with a simple idea - that no meal should go to waste while people go hungry.</p>
   </section>
 
   <section class="about-story">
@@ -256,42 +198,24 @@
   </section>
 
   <section class="values">
-    <div style="text-align:center; margin-bottom:10px;">
-      <span class="section-label">What Drives Us</span>
-      <h2 class="section-title">Our Core Values</h2>
-    </div>
+    <div style="text-align:center; margin-bottom:10px;"><span class="section-label">What Drives Us</span><h2 class="section-title">Our Core Values</h2></div>
     <div class="values-grid">
-      <div class="value-card"><div class="icon">❤️</div><h4>Compassion</h4><p>Every decision we make is rooted in empathy — for those we serve and for the communities we're part of.</p></div>
-      <div class="value-card"><div class="icon">🌍</div><h4>Sustainability</h4><p>We believe in circular food systems where surplus becomes sustenance, not landfill.</p></div>
-      <div class="value-card"><div class="icon">🤝</div><h4>Partnership</h4><p>No one fights hunger alone. We thrive through collaboration with businesses, NGOs, and volunteers.</p></div>
-      <div class="value-card"><div class="icon">📊</div><h4>Transparency</h4><p>We track and publish every meal rescued and delivered, so you always know your impact.</p></div>
-      <div class="value-card"><div class="icon">⚡</div><h4>Urgency</h4><p>Food waits for no one. We act fast, and we're proud of our rapid response times.</p></div>
-      <div class="value-card"><div class="icon">🏆</div><h4>Excellence</h4><p>We uphold the highest hygiene and safety standards so every meal is fit and safe to eat.</p></div>
+      <div class="value-card"><div class="icon">&#10084;</div><h4>Compassion</h4><p>Every decision we make is rooted in empathy - for those we serve and for the communities we are part of.</p></div>
+      <div class="value-card"><div class="icon">&#127757;</div><h4>Sustainability</h4><p>We believe in circular food systems where surplus becomes sustenance, not landfill.</p></div>
+      <div class="value-card"><div class="icon">&#129309;</div><h4>Partnership</h4><p>No one fights hunger alone. We thrive through collaboration with businesses, NGOs, and volunteers.</p></div>
+      <div class="value-card"><div class="icon">&#128202;</div><h4>Transparency</h4><p>We track and publish every meal rescued and delivered, so you always know your impact.</p></div>
+      <div class="value-card"><div class="icon">&#9889;</div><h4>Urgency</h4><p>Food waits for no one. We act fast, and we are proud of our rapid response times.</p></div>
+      <div class="value-card"><div class="icon">&#127942;</div><h4>Excellence</h4><p>We uphold the highest hygiene and safety standards so every meal is fit and safe to eat.</p></div>
     </div>
   </section>
 
   <section class="team">
-    <div style="text-align:center; margin-bottom:10px;">
-      <span class="section-label">The People</span>
-      <h2 class="section-title">Meet Our Team</h2>
-    </div>
+    <div style="text-align:center; margin-bottom:10px;"><span class="section-label">The People</span><h2 class="section-title">Meet Our Team</h2></div>
     <div class="team-grid">
-      <div class="team-card">
-        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&q=70" alt="Sarah"/>
-        <div class="team-card-body"><h4>Sarah Kimani</h4><span>Executive Director</span></div>
-      </div>
-      <div class="team-card">
-        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&q=70" alt="David"/>
-        <div class="team-card-body"><h4>David Ochieng</h4><span>Operations Lead</span></div>
-      </div>
-      <div class="team-card">
-        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&q=70" alt="Amina"/>
-        <div class="team-card-body"><h4>Amina Hassan</h4><span>Partnerships Manager</span></div>
-      </div>
-      <div class="team-card">
-        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&q=70" alt="James"/>
-        <div class="team-card-body"><h4>James Mwangi</h4><span>Volunteer Coordinator</span></div>
-      </div>
+      <div class="team-card"><img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&q=70" alt="Sarah"/><div class="team-card-body"><h4>Sarah Kimani</h4><span>Executive Director</span></div></div>
+      <div class="team-card"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&q=70" alt="David"/><div class="team-card-body"><h4>David Ochieng</h4><span>Operations Lead</span></div></div>
+      <div class="team-card"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&q=70" alt="Amina"/><div class="team-card-body"><h4>Amina Hassan</h4><span>Partnerships Manager</span></div></div>
+      <div class="team-card"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&q=70" alt="James"/><div class="team-card-body"><h4>James Mwangi</h4><span>Volunteer Coordinator</span></div></div>
     </div>
   </section>
 
@@ -308,33 +232,17 @@
   <section class="page-hero">
     <span class="section-label" style="background:rgba(255,255,255,.15);color:#fff;">Reach Out</span>
     <h1>Contact Us</h1>
-    <p>Have questions? Want to volunteer, donate, or partner? We'd love to hear from you.</p>
+    <p>Have questions? Want to volunteer, donate, or partner? We would love to hear from you.</p>
   </section>
 
   <div class="contact-layout">
     <div class="contact-info">
-      <div>
-        <h2>Let's Talk</h2>
-        <p>We're always available to answer questions, discuss partnerships, or onboard new volunteers.</p>
-      </div>
-      <div class="contact-detail">
-        <div class="icon">📍</div>
-        <div><h4>Our Office</h4><p>Westlands, Nairobi, Kenya</p></div>
-      </div>
-      <div class="contact-detail">
-        <div class="icon">📞</div>
-        <div><h4>Phone</h4><p>+254 700 123 456</p></div>
-      </div>
-      <div class="contact-detail">
-        <div class="icon">✉️</div>
-        <div><h4>Email</h4><p>hello@foodconnect.org</p></div>
-      </div>
-      <div class="contact-detail">
-        <div class="icon">🕐</div>
-        <div><h4>Operating Hours</h4><p>Mon–Fri: 7am – 8pm<br/>Sat–Sun: 8am – 5pm</p></div>
-      </div>
+      <div><h2>Let's Talk</h2><p>We are always available to answer questions, discuss partnerships, or onboard new volunteers.</p></div>
+      <div class="contact-detail"><div class="icon">&#128205;</div><div><h4>Our Office</h4><p>Westlands, Nairobi, Kenya</p></div></div>
+      <div class="contact-detail"><div class="icon">&#128222;</div><div><h4>Phone</h4><p>+254 700 123 456</p></div></div>
+      <div class="contact-detail"><div class="icon">&#9993;</div><div><h4>Email</h4><p>hello@foodconnect.org</p></div></div>
+      <div class="contact-detail"><div class="icon">&#128336;</div><div><h4>Operating Hours</h4><p>Mon-Fri: 7am - 8pm<br/>Sat-Sun: 8am - 5pm</p></div></div>
     </div>
-
     <div class="contact-form-wrap">
       <h2>Send Us a Message</h2>
       <div class="form-row">
@@ -343,7 +251,7 @@
       </div>
       <div class="form-group"><label>Email Address</label><input type="email" placeholder="john@example.com"/></div>
       <div class="form-group">
-        <label>I'm reaching out as a…</label>
+        <label>I am reaching out as a...</label>
         <select>
           <option>Individual / Volunteer</option>
           <option>Hotel / Restaurant</option>
@@ -352,12 +260,9 @@
           <option>Media / Press</option>
         </select>
       </div>
-      <div class="form-group">
-        <label>Message</label>
-        <textarea placeholder="Tell us how you'd like to get involved or any questions you have…"></textarea>
-      </div>
+      <div class="form-group"><label>Message</label><textarea placeholder="Tell us how you would like to get involved or any questions you have..."></textarea></div>
       <button class="btn-green" style="width:100%; padding:14px; font-size:1rem;" onclick="submitForm()">Send Message</button>
-      <div class="form-success" id="form-success">✅ Thank you! We'll get back to you within 24 hours.</div>
+      <div class="form-success" id="form-success">Thank you! We will get back to you within 24 hours.</div>
     </div>
   </div>
 </div>
@@ -398,8 +303,8 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2025 Food Connect. All rights reserved.</span>
-    <span>Made with ❤️ to fight hunger</span>
+    <span>2025 Food Connect. All rights reserved.</span>
+    <span>Made with love to fight hunger</span>
   </div>
 </footer>
 
@@ -411,7 +316,18 @@
     const navMap = { home: 'nav-home', how: 'nav-how', involved: 'nav-involved', about: 'nav-about' };
     if (navMap[id]) document.getElementById(navMap[id]).classList.add('active');
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    closeMobileMenu();
     return false;
+  }
+
+  function toggleMenu() {
+    document.querySelector('nav').classList.toggle('menu-open');
+    document.getElementById('hamburger').classList.toggle('active');
+  }
+
+  function closeMobileMenu() {
+    document.querySelector('nav').classList.remove('menu-open');
+    document.getElementById('hamburger').classList.remove('active');
   }
 
   function submitForm() {
